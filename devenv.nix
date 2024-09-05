@@ -1,6 +1,6 @@
 {inputs, ...}:
 {
-  perSystem = { config, pkgs, system, ... }: {
+  perSystem = { pkgs, system, ... }: {
     formatter = with pkgs; nixfmt;
 
     devenv.shells.default = {
@@ -39,7 +39,7 @@
             extensions.open-vsx.eamodio.gitlens
           ];
         };
-      in [ config.packages.default vscode-ext ];
+      in [ vscode-ext ];
     };
   };
 }
