@@ -14,3 +14,13 @@ result-*
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
