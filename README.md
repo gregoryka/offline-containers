@@ -13,6 +13,13 @@ Specificallty, generate device spec for podman:
 sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
 ```
 
+Generate container:
+```bash
+nix build '.#ollama.copyToPodman' && ./result/bin/copy-to-podman
+```
+
+See [nix2container](https://github.com/nlewo/nix2container) for copying the container to other sources
+
 Running with GPU:
 
 ```bash
