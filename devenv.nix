@@ -1,5 +1,6 @@
 { inputs, ... }:
 {
+  imports = [ inputs.devenv.flakeModule ];
   perSystem =
     { pkgs, system, ... }:
     {

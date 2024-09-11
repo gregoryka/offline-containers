@@ -37,8 +37,6 @@
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import inputs.systems;
       imports = [
-        inputs.devenv.flakeModule
-        inputs.treefmt-nix.flakeModule
         ./formatter.nix
         ./devenv.nix
         ./containers.nix
