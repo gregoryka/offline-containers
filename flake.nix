@@ -41,6 +41,7 @@
         inputs.treefmt-nix.flakeModule
         ./formatter.nix
         ./devenv.nix
+        ./containers.nix
       ];
 
     };
