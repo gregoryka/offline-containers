@@ -47,6 +47,12 @@
                 "DATA_DIR=/data"
                 # TODO enable cuda for webui - opencv breaks currently and selective override is hard
                 # "USE_CUDA_DOCKER=true"
+                # Ensure it doesn't try to download from internet
+                "HF_HUB_OFFLINE=1"
+                # Use multilingual model
+                "RAG_EMBEDDING_MODEL=intfloat/multilingual-e5-large"
+                # Huggingface cache location
+                "HF_HOME=/data/cache/embedding/models"
               ];
               WorkingDir = "/data";
               entrypoint = [ "${pkgs.open-webui}/bin/open-webui" ];
