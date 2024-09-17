@@ -8,6 +8,9 @@ podman create \
     --security-opt=label=disable \
     --pod=offline-llm \
     -v ollama:/root/.ollama \
+    -v /usr/lib64/libcuda.so:/usr/lib64/libcuda.so:ro \
+    -v /usr/lib64/libcuda.so.555.58.02:/usr/lib64/libcuda.so.555.58.02:ro \
+    --env-merge "LD_LIBRARY_PATH=/usr/lib64:${LD_LIBRARY_PATH}" \
     localhost/ollama:latest serve
 podman create \
     --name=open-webui \
